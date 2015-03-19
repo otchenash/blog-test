@@ -13,8 +13,6 @@
         $scope.del = function(id) {
             BlogControlService.delPost(id)
         };
-
-
     }
 
   ng.module('blogApp').controller('ArticlesListCtrl', ['$scope', 'BlogControlService', 'ArticleListFactory', 'MapperService',  ArticlesListCtrl]);

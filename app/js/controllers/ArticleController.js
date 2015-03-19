@@ -16,9 +16,6 @@
             $location.path('/');
             BlogControlService.delPost(id)
         };
-
-
-
     }
 
   ng.module('blogApp').controller('ArticleListCtrl', ['$scope', '$location', 'ArticleListFactory', 'MapperService', 'BlogControlService', ArticleListCtrl]);

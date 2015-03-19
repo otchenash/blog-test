@@ -1,7 +1,7 @@
 (function(global, ng) {
     'use strict';
 
-    function BodyCtrl($scope, MapperService, BlogControlService){
+    function BodyCtrl($scope, MapperService, BlogControlService, $location){
         $scope.openModal = false;
 
         $scope.closeModal = function () {
@@ -12,6 +12,8 @@
             $scope.openModal = true;
             $scope.edit('');
         };
+
+        
 
         $scope.save = function(perm){
             if(perm){
@@ -33,6 +35,6 @@
 
     }
 
-  ng.module('blogApp').controller('BodyCtrl', ['$scope', 'MapperService', 'BlogControlService', BodyCtrl]);
+  ng.module('blogApp').controller('BodyCtrl', ['$scope', 'MapperService', 'BlogControlService', '$location', BodyCtrl]);
 
 }(this, this.angular));

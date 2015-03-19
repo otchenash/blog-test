@@ -1,0 +1,20 @@
+<form class="modal" name="form" role="form" ng-show="openModal">
+    <div  class="modal-content">
+        <div class="form-group">
+            <label for="author">Author*</label>
+            <input type="text" ng-minlength="1" ng-model="editModel.author" required class="form-control" id="author" placeholder="Author">
+        </div>
+        <div class="form-group">
+            <label for="title">Title*</label>
+            <input type="text" ng-minlength="1" ng-model="editModel.title" required class="form-control" id="title" placeholder="Title">
+        </div>
+        <div class="form-group">
+            <label for="text">Text*</label>
+            <textarea id="text" ng-minlength="1" class="form-control" required ng-model="editModel.text"></textarea>
+        </div>
+        <button ng-click="save(!form.$valid)"><span ng-show="editModel.id">Save</span><span ng-hide="editModel.id">Add Post</span></button>
+        <button ng-click="closeModal()">Cancel</button>
+    </div>
+</form>
+
+

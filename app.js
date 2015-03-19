@@ -9,22 +9,18 @@
     'blogApp.data',
     'blogApp.services',
     'ngRoute'
-]).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
-
-        /*$locationProvider.html5Mode({
-            enable: true,
-            requireBase: false
-        });*/
-
+]).config(['$routeProvider', '$locationProvider', function($routeProvider){
         $routeProvider
             .when('/', {
-              templateUrl : 'app/template/home.html'
+                templateUrl : 'app/template/_home.html',
+                controller : 'ArticlesListCtrl'
             })
             .when('/article/:articleId', {
-              templateUrl : 'app/template/article.html'
+                templateUrl : 'app/template/_article.html',
+                controller : 'ArticleListCtrl'
             })
             .otherwise({
-              redirectTo : '/'
+                redirectTo : '/'
             });
   }]);
 

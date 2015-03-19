@@ -1,0 +1,20 @@
+<article class="article blog-post" ng-hide="!article.title && !article.image && !article.text && !article.author">
+    <h3 ng-if="article.title" class="article-title">
+        <a href="#/article/{{article.id}}">
+            <span>{{article.title}}</span>
+        </a>
+    </h3>
+    <figure class="article-image" ng-if="article.image">
+        <img class="img-responsive" ng-src="{{article.image}}" alt="{{article.title}}"/>
+    </figure>
+    <div ng-if="article.text" class="article-text">
+        <p>{{article.text | cut:(articles.length > 1):true:100}} <a href="#/article/{{article.id}}" ng-show="{{articles.length > 1}}">reed more</a></p>
+    </div>
+    <div class="btn-toolbar">
+        <a class="btn btn-default btn-sm" ng-hide="{{articles.length > 1}}" href="#/"><span class="glyphicon glyphicon-arrow-left"></span> Back</a>
+        <button class="btn btn-default btn-sm" ng-click="edit(article)"><span class="glyphicon glyphicon-pencil"></span> Edit Post</button>
+        <button class="btn btn-default btn-sm" ng-click="del(article.id)"><span class="glyphicon glyphicon-shopping-cart"></span> Del Post</button>
+    </div>
+    <h4 ng-if="article.author" class="article-author">by {{article.author}}</h4>
+    <h5 ng-if="article.date" class="article-date">{{article.date}}</h5>
+</article>

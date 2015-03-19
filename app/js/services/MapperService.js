@@ -10,7 +10,7 @@
             self.id = viewModel._id || 0;
             self.author = author(viewModel);
             self.title = viewModel.title;
-            self.text = viewModel.description;
+            self.text = viewModel.description || viewModel.text;
             self.date = viewModel.date;
 
             function author(viewModel){

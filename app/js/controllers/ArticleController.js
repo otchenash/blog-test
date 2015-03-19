@@ -7,7 +7,6 @@
             idIndex = pathArr.length - 1,
             id = pathArr[idIndex];
 
-
         ArticleListFactory.get(id)
              .then(function(result){
                 $scope.articles = new Array(MapperService.getArticle(result.data));

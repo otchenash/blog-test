@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" ng-app="blogApp">
+<head>
+  <!--<base href="/"/>-->
+  <meta charset="utf-8">
+  <title>Blog</title>
+  <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet/less" href="app/css/app.less">
+  <script src="libs/less/dist/less.min.js"></script>
+  <script src="libs/angular/angular.js"></script>
+  <script src="libs/angular-route/angular-route.js"></script>
+  <script src="libs/angular-resource/angular-resource.js"></script>
+  <script src="app.js"></script>
+  <script src="app/js/controllers/ArticlesController.js"></script>
+  <script src="app/js/controllers/ArticleController.js"></script>
+  <script src="app/js/controllers/BodyController.js"></script>
+  <script src="app/js/services/BlogControlService.js"></script>
+  <script src="app/js/directives/BlogPost.js"></script>
+  <script src="app/js/directives/Modal.js"></script>
+  <script src="app/js/data/factory.js"></script>
+  <script src="app/js/services/MapperService.js"></script>
+  <script src="app/js/filters/CutFilter.js"></script>
+</head>
+<body ng-controller="BodyCtrl">
+<div class="blog-masthead text-center">
+  <div class="logo">
+    <a href="#"><img src="app/img/main-logo.png" alt=""/></a>
+  </div>
+  <div class="container-fluid wrap-nav">
+    <nav class="blog-nav">
+      <ul>
+        <li>
+          <a class="blog-nav-item active" href="#">javascript</a>
+        </li>
+        <li>
+          <a class="blog-nav-item" href="#">css</a>
+        </li>
+        <li>
+          <a class="blog-nav-item" href="#">latest</a>
+        </li>
+        <li>
+          <a class="blog-nav-item" href="#">html</a>
+        </li>
+        <li>
+          <a class="blog-nav-item" href="#">design</a></li>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 blog-main">
+      <ng-view></ng-view>
+    </div><!-- /.blog-main -->
+
+    <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+      <div class="sidebar-module">
+        <h4 data-icon="?">About</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="sidebar-module">
+        <h4 data-icon="!">Some shit</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+      </div>
+      <div class="sidebar-module">
+        <ol class="list-unstyled tag-list">
+          <li><a href="#">Raccoon</a></li>
+          <li><a href="#">Raccoon</a></li>
+          <li><a href="#">Coon</a></li>
+          <li><a href="#">Dog</a></li>
+          <li><a href="#">Cat</a></li>
+          <li><a href="#">Developer</a></li>
+          <li><a href="#">Raccoon</a></li>
+          <li><a href="#">Raccoon</a></li>
+          <li><a href="#">Coon</a></li>
+          <li><a href="#">Dog</a></li>
+          <li><a href="#">Cat</a></li>
+          <li><a href="#">Developer</a></li
+        </ol>
+      </div>
+    </div><!-- /.blog-sidebar -->
+
+  </div><!-- /.row -->
+
+</div>
+<!--<div ng-view class="view-frame"></div>-->
+</div>
+  <modal-block></modal-block>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</body>
+</html>

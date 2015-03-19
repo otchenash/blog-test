@@ -1,0 +1,13 @@
+{
+  "version": "0.0.0",
+  "private": true,
+  "name": "angular-blog",
+  "description": "test task for epam",
+  "repository": "https://github.com/RogVictor/blog.git",
+  "devDependencies": {
+    "http-server": "^0.6.1"
+  },
+  "scripts": {
+    "start": "http-server -a 0.0.0.0 -p 8000"
+  }
+}

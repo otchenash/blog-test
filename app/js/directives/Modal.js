@@ -6,7 +6,7 @@
         return {
             restrict: 'E',
             replace: false,
-            templateUrl: 'app/template/_modal.html'
+            templateUrl: 'app/templates/_modal.html'
         }
     }
 

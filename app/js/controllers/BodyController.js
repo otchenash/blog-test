@@ -13,8 +13,6 @@
             $scope.edit('');
         };
 
-        
-
         $scope.save = function(perm){
             if(perm){
                 return false;

@@ -7,7 +7,7 @@
             restrict: 'E',
             replace: true,
             scope: '=',
-            templateUrl : 'app/template/_post.html'
+            templateUrl : 'app/templates/_post.html'
         }
     }
 

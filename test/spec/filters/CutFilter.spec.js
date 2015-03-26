@@ -16,6 +16,3 @@ describe('Filter: cutFilter', function () {
         expect(cuttedText.length).toBeLessThan(101);
     });
 });
-
-
-

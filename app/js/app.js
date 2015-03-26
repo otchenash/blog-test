@@ -12,11 +12,11 @@
 ]).config(['$routeProvider', '$locationProvider', function($routeProvider){
         $routeProvider
             .when('/', {
-                templateUrl : 'app/template/_home.html',
+                templateUrl : 'app/templates/_home.html',
                 controller : 'ArticlesListCtrl'
             })
             .when('/article/:articleId', {
-                templateUrl : 'app/template/_article.html',
+                templateUrl : 'app/templates/_article.html',
                 controller : 'ArticleListCtrl'
             })
             .otherwise({

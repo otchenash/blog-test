@@ -8,14 +8,14 @@
                 return $http({
                     url: 'http://54.72.3.96:3000/techtalks',
                     method: 'GET'
-                });
+                })
             },
 
             get : function(id){
                 return $http({
                     url: 'http://54.72.3.96:3000/techtalks/' + id,
                     method: 'GET'
-                });
+                })
             },
 
             add : function(data){
@@ -23,6 +23,8 @@
                     url: 'http://54.72.3.96:3000/techtalks/',
                     method: 'POST',
                     data: data
+                }).then(function(){
+                    location.reload();
                 });
             },
 
@@ -31,6 +33,8 @@
                     url: 'http://54.72.3.96:3000/techtalks/' + id,
                     method: 'PUT',
                     data: data
+                }).then(function(){
+                    location.reload();
                 });
             },
 
@@ -38,6 +42,8 @@
                 return $http({
                     url: 'http://54.72.3.96:3000/techtalks/' + id,
                     method: 'DELETE'
+                }).then(function(){
+                    location.reload();
                 });
             }
         }

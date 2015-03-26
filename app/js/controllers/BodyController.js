@@ -1,7 +1,7 @@
 (function(global, ng) {
     'use strict';
 
-    function BodyCtrl($scope, MapperService, BlogControlService, $location){
+    function BodyCtrl($scope, MapperService, ArticleListFactory){
         $scope.openModal = false;
 
         $scope.closeModal = function () {
@@ -19,20 +19,17 @@
             }
             var dataJson = ng.toJson(MapperService.getArticle($scope.editModel).mapTo());
             if($scope.editModel.id){
-                BlogControlService.editPost($scope.editModel.id, dataJson);
+                ArticleListFactory.edit($scope.editModel.id, dataJson);
             }
-            BlogControlService.addPost(dataJson);
+            ArticleListFactory.add(dataJson);
         };
 
         $scope.edit = function (article) {
             $scope.editModel = article;
             $scope.openModal = true;
         };
-
-
-
     }
 
-  ng.module('blogApp').controller('BodyCtrl', ['$scope', 'MapperService', 'BlogControlService', '$location', BodyCtrl]);
+  ng.module('blogApp').controller('BodyCtrl', ['$scope', 'MapperService', 'ArticleListFactory', BodyCtrl]);
 
 }(this, this.angular));

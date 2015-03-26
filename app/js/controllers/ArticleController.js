@@ -1,7 +1,7 @@
 (function(global, ng) {
     'use strict';
 
-    function ArticleListCtrl($scope, $location, ArticleListFactory, MapperService, BlogControlService){
+    function ArticleListCtrl($scope, $location, ArticleListFactory, MapperService){
 
         var pathArr = $location.path().split('/'),
             idIndex = pathArr.length - 1,
@@ -14,10 +14,10 @@
 
         $scope.del = function(id) {
             $location.path('/');
-            BlogControlService.delPost(id)
+            ArticleListFactory.del(id)
         };
     }
 
-  ng.module('blogApp').controller('ArticleListCtrl', ['$scope', '$location', 'ArticleListFactory', 'MapperService', 'BlogControlService', ArticleListCtrl]);
+  ng.module('blogApp').controller('ArticleListCtrl', ['$scope', '$location', 'ArticleListFactory', 'MapperService', ArticleListCtrl]);
 
 }(this, this.angular));

@@ -1,7 +1,7 @@
 (function(global, ng) {
     'use strict';
 
-    function ArticlesListCtrl($scope, BlogControlService, ArticleListFactory, MapperService ){
+    function ArticlesListCtrl($scope, ArticleListFactory, MapperService ){
 
         ArticleListFactory.getAll()
             .then(function(result){
@@ -11,10 +11,10 @@
             });
 
         $scope.del = function(id) {
-            BlogControlService.delPost(id)
+            ArticleListFactory.del(id)
         };
     }
 
-  ng.module('blogApp').controller('ArticlesListCtrl', ['$scope', 'BlogControlService', 'ArticleListFactory', 'MapperService',  ArticlesListCtrl]);
+  ng.module('blogApp').controller('ArticlesListCtrl', ['$scope', 'ArticleListFactory', 'MapperService',  ArticlesListCtrl]);
 
 }(this, this.angular));

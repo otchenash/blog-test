@@ -1,4 +1,4 @@
-describe('Directive: blogPost', function () {
+describe('Directive: modal-block', function () {
     'use strict';
 
     // load the directive's module

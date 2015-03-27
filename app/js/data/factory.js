@@ -1,6 +1,12 @@
 (function(global, ng) {
     'use strict';
 
+    /**
+     * Data factory responsible from posts.
+     * @constructor
+     * @class blogApp.data.ArticleListFactory
+     * @extends {factory}
+     */
     function ArticleListFactory($http){
 
         return {

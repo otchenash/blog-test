@@ -1,18 +1,27 @@
 (function(global, ng) {
     'use strict';
 
+    /**
+     * Responsible for workflow all application
+     * @constructor
+     * @class blogApp.controller.BodyCtrl
+     * @extends {controller}
+     */
     function BodyCtrl($scope, MapperService, ArticleListFactory){
         $scope.openModal = false;
 
+        // close modal
         $scope.closeModal = function () {
             $scope.openModal = !$scope.openModal;
         };
 
+        // add new post
         $scope.addNewPost = function(){
             $scope.openModal = true;
             $scope.edit('');
         };
 
+        // save or add post
         $scope.save = function(perm){
             if(perm){
                 return false;
@@ -24,6 +33,7 @@
             ArticleListFactory.add(dataJson);
         };
 
+        // edit post
         $scope.edit = function (article) {
             $scope.editModel = article;
             $scope.openModal = true;

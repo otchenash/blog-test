@@ -18,7 +18,7 @@ describe('Service: mapper', function () {
         mapperService = $injector.get('MapperService');
     }));
 
-    it('should update object', function(){
+    it('should update article', function(){
         var newArticle = mapperService.getArticle(article);
         expect(article.lector[0]).toBe(newArticle.author)
     });

@@ -2,11 +2,16 @@
 
     'use strict';
 
+    /**
+     * Directive blog post.
+     * @constructor
+     * @class blogApp.controls.blogPost
+     * @extends {directive}
+     */
     function BlogPost(){
         return {
             restrict: 'E',
             replace: true,
-            scope: '=',
             templateUrl : 'app/templates/_post.html'
         }
     }

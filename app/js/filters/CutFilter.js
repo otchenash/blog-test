@@ -2,8 +2,14 @@
 
     'use strict';
 
+    /**
+     * Responsible for cut text.
+     * @class blogApp.filter.cut
+     * @extends {filter}
+     */
     function CutFilter(){
         return function (value, permission, wordwise, max, tail) {
+
             if(!permission) return value;
 
             if (!value) return '';

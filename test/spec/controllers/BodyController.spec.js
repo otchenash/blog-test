@@ -1,4 +1,4 @@
-describe('Filter: cutFilter', function () {
+describe('Controller: BodyCtrl', function () {
     'use strict';
 
     // load the service's module

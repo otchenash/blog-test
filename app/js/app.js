@@ -1,4 +1,5 @@
 (function(global, ng) {
+
   'use strict';
 
   ng.module('blogApp.controls', []);

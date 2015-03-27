@@ -1,7 +1,6 @@
 (function(global, ng) {
 
   'use strict';
-
   ng.module('blogApp.controls', []);
   ng.module('blogApp.data', []);
   ng.module('blogApp.services', []);
